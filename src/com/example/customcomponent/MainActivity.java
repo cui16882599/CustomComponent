@@ -31,12 +31,6 @@ public class MainActivity extends Activity implements OnClickListener{
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
         case R.id.btn_total:
