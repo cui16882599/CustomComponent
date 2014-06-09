@@ -2,8 +2,6 @@ package com.example.customcomponent;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -26,8 +24,6 @@ public class MainActivity extends Activity implements OnClickListener{
         btnPrev.setOnClickListener(this);
         Button btnNext = (Button) findViewById(R.id.btn_next);
         btnNext.setOnClickListener(this);
-        TestSingleton app1 = TestSingleton.getInstance();
-        Log.d("cuiqing", "app1:"+app1);
     }
 
     @Override
