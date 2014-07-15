@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:roundimage="http://schemas.android.com/apk/res/android.cq.custom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:src="@drawable/avator" />
+
+    <android.cq.custom.view.RoundImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        roundimage:src="@drawable/avator"
+        roundimage:type="circle" />
+
+    <android.cq.custom.view.RoundImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        roundimage:radius="10dp"
+        roundimage:src="@drawable/avator"
+        roundimage:type="round" />
+    
+    <android.cq.custom.view.RoundImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        roundimage:radius="20dp"
+        roundimage:src="@drawable/avator"
+        roundimage:type="round" />
+</LinearLayout>

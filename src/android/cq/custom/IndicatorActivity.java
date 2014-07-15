@@ -1,13 +1,14 @@
-package com.example.customcomponent;
+package android.cq.custom;
 
 import android.app.Activity;
+import android.cq.custom.view.IndicatorView;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MainActivity extends Activity implements OnClickListener{
+public class IndicatorActivity extends Activity implements OnClickListener{
 
     IndicatorView indicator;
     EditText edTotal;
@@ -15,7 +16,7 @@ public class MainActivity extends Activity implements OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_indicator);
         indicator = (IndicatorView) findViewById(R.id.indicator);
         edTotal = (EditText) findViewById(R.id.ed_num);
         Button btnTotal = (Button) findViewById(R.id.btn_total);

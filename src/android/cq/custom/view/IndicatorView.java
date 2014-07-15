@@ -1,7 +1,8 @@
-package com.example.customcomponent;
+package android.cq.custom.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.cq.custom.R;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -30,7 +31,7 @@ public class IndicatorView extends View{
         this(context,null);
     }
     
-    // 重写这个方法就可以在布局文件中定义添加这个自定义View 
+    // 重写这个方法就可以在布局文件中定义添加这个自定义View
     public IndicatorView(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs,R.styleable.Indicator);
@@ -56,6 +57,7 @@ public class IndicatorView extends View{
         int h;
         Log.d(TAG, "widthMeasureSpec="+Integer.toBinaryString(widthMeasureSpec)+
                 "heightMeasureSpec="+Integer.toBinaryString(heightMeasureSpec));
+        // 根据图表重新计算view的大小
         if (mActive == null || mUnActive == null) {
             bitmapWidth = -1;
             bitmapHeight = -1;
@@ -69,7 +71,7 @@ public class IndicatorView extends View{
         int widthSize = resolveSizeAndState(w, widthMeasureSpec, 0);
         int heightSize = resolveSizeAndState(h, heightMeasureSpec, 0);
         Log.d(TAG, "onMeasure:"+"widthSize="+widthSize+" heightSize="+heightSize);
-        //此行代码决定自定义的View的大小
+        //此行代码决定自定义的View的大小,如果不执行这行代码会报错
         setMeasuredDimension(widthSize, heightSize);
         
     }
